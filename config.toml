@@ -1,8 +1,7 @@
 ######################## default configuration ####################
-baseURL = "https://demo.gethugothemes.com"
+baseURL = "https://martezr.github.io/greenreedtech-website"
 title = "Green Reed Technology - Technology without boundaries"
 theme = "bookworm-light"
-# post pagination
 paginate = "5"
 # post excerpt
 summaryLength = "50"
