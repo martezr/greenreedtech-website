@@ -1,0 +1,193 @@
+######################## default configuration ####################
+baseURL = "https://demo.gethugothemes.com"
+title = "Green Reed Technology - Technology without boundaries"
+theme = "bookworm-light"
+# post pagination
+paginate = "5"
+# post excerpt
+summaryLength = "50"
+# google analytics
+googleAnalytics = "" # example : UA-123-45
+# disqus short name
+disqusShortname = "greenreedtech" 
+[permalinks]
+  blog = '/:title/'
+
+############################# Modules ##############################
+[module.hugoVersion]
+extended = true
+min = "0.87.0"
+
+############################# Image Processing ##############################
+[imaging]
+quality = "95"
+
+############################# Outputs ##############################
+[outputs]
+home = ["HTML", "RSS", "JSON"]
+
+[markup.goldmark.renderer]
+unsafe= true
+
+
+############################## Plugins ##############################
+# CSS Plugins
+[[params.plugins.css]]
+link = "plugins/bootstrap/bootstrap.min.css"
+[[params.plugins.css]]
+link = "plugins/line-awesome/css/line-awesome.min.css"
+[[params.plugins.css]]
+link = "https://fonts.googleapis.com/css2?family=Mulish:wght@500;600;700;800;900&display=swap"
+
+# JS Plugins
+[[params.plugins.js]]
+link = "plugins/jquery/jquery.min.js"
+[[params.plugins.js]]
+link = "plugins/bootstrap/bootstrap.min.js"
+[[params.plugins.js]]
+link = "plugins/instagram-feed/instagram-feed.js"
+[[params.plugins.js]]
+link = "plugins/search/fuse.min.js"
+[[params.plugins.js]]
+link = "plugins/search/mark.js"
+[[params.plugins.js]]
+link = "plugins/search/search.js"
+
+# site variables
+[params.variables]
+font_primary = "Mulish"
+h1 = "64px"
+h1_lg = "52px"
+h1_md = "42px"
+h2 = "38px"
+h2_md = "30px"
+h3 = "30px"
+h3_md = "24px"
+h4 = "24px"
+h5 = "18px"
+h6 = "16px"
+white = "#ffffff"
+black = "#000000"
+dark = "#152035"
+gray = "#747577"
+light = "#FAFAFA"
+color_primary = "#01AD9F"
+
+#################### default parameters ################################
+[params]
+logo = "images/logo.png"
+logo_width = "200px"
+favicon = "images/favicon.png"
+# Meta data
+description = "This is meta description"
+author = "Themefisher"
+# contact form action
+contact_form_action = "#" # contact form works with https://formspree.io
+# search
+search = true
+# main section
+mainSections = ["blog"]
+# copyright
+copyright = "Copyright © 2022 Green Reed Technology. All rights reserved."
+
+# Preloader
+[params.preloader]
+enable = false
+preloader = "" # use jpg, png, svg or gif format.
+
+# cookies
+[params.cookies]
+enable = false
+expire_days = 2
+
+############################# Main Menu ########################
+[[menu.main]]
+name = "Home"
+url = "/"
+weight = 1
+
+[[menu.main]]
+name = "DevOps"
+url = "categories/devops/"
+weight = 2
+
+[[menu.main]]
+weight = 3
+url = "categories/hashicorp/"
+name = "HashiCorp"
+hasChildren = true
+
+  [[menu.main]]
+  parent = "HashiCorp"
+  name = "Packer"
+  url = "category/packer/"
+  weight = 1
+
+  [[menu.main]]
+  parent = "HashiCorp"
+  name = "Terraform"
+  url = "category/terraform/"
+  weight = 2
+
+  [[menu.main]]
+  parent = "HashiCorp"
+  name = "Vault"
+  url = "categories/vault/"
+  weight = 3
+
+[[menu.main]]
+name = "StackStorm"
+url = "categories/stackstorm/"
+weight = 4
+
+[[menu.main]]
+weight = 5
+url = "categories/vmware/"
+name = "VMware"
+hasChildren = true
+
+  [[menu.main]]
+  parent = "VMware"
+  name = "vRO"
+  url = "vro/"
+  weight = 1
+
+  [[menu.main]]
+  parent = "VMware"
+  name = "vRA"
+  url = "vra/"
+  weight = 2
+
+[[menu.main]]
+name = "About"
+url = "about/"
+weight = 7
+
+############################# Footer Menu ########################
+[[menu.footer]]
+name = "About"
+url = "about/"
+weight = 1
+
+[[menu.footer]]
+name = "Privacy"
+url = "privacy/"
+weight = 3
+
+[[menu.footer]]
+name = "Terms & Conditions"
+url = "terms-conditions/"
+weight = 4
+
+# Social Icons
+[[params.social]]
+icon = "lab la-twitter" # https://icons8.com/line-awesome
+url = "https://www.twitter.com/greenreedtech"
+
+[[params.social]]
+icon = "lab la-youtube" # https://icons8.com/line-awesome
+url = "https://www.youtube.com/greenreedtech"
+
+[[params.social]]
+icon = "lab la-linkedin-in" # https://icons8.com/line-awesome
+url = "https://www.linkedin.com/in/martezreed"
