@@ -1,5 +1,6 @@
 ---
 title: "HashiCorp Vault vSphere Authentication with VMware Event Broker Appliance (VEBA)"
+image: "https://s3.us-west-2.amazonaws.com/greenreedtech.com/hashicorp-vault-vsphere-authentication-with-vmware-event-broker-appliance-veba/vsphere-vault-auth-veba-title.png"
 date: "2021-02-16"
 author: "Martez Reed"
 tags: ["DevOps","HashiCorp","Security","Vault"]
@@ -15,7 +16,7 @@ To overcome the challenge of the platform lacking a native metadata service we c
 
 ## Solution Overview
 
-![](images/vsphere-vault-auth-veba.png)
+![](https://s3.us-west-2.amazonaws.com/greenreedtech.com/hashicorp-vault-vsphere-authentication-with-vmware-event-broker-appliance-veba/vsphere-vault-auth-veba.png)
 
 Now that we have some background and context on the problem let's take a look into the solution. We need to present the virtual machine with a unique piece of data that no other virtual can fetch or easily guess. HashiCorp Vault provides an AppRole authentication method that is ideally used for machine authentication. The AppRole requires a role ID and a secret ID to be presented to Vault to authenticate. The solution is to use an external system such as VMware Event Broker Appliance to populate a virtual machine's guest info with the role ID and Secret ID from Vault. This is only accessible by the virtual machine itself and vSphere accounts with the appropriate permissions. VMware tools allows the guest OS to query the credentials and ultimately use them to authenticate to Vault. Now we're ready to walk through an example of configuring Vault and VEBA to enable this authentication method.
 
@@ -130,7 +131,7 @@ faas-cli deploy -f stack.yml --tls-no-verify
 
 The VEBA function will inject the Vault AppRole role ID and secret ID into the VM's advanced settings when the virtual machine is powered on but it first must be assigned a role in the custom attributes. The attribute name must be vauth-role as that is what the VEBA function uses when interacting the HashiCorp Vault instance.
 
-![](images/veba-vauth-vm-attributes.png)
+![](https://s3.us-west-2.amazonaws.com/greenreedtech.com/hashicorp-vault-vsphere-authentication-with-vmware-event-broker-appliance-veba/veba-vauth-vm-attributes.png)
 
 The guest operating system now has access to the approle role name, role id and secret id to authenticate to HashiCorp Vault. A configuration management tool such as Ansible, Chef or Puppet could be used to run the command to query the guest info and subsequently generate a HashiCorp Vault agent configuration with that information. We won't delve into the specifics of how to automate that end to end process in this post but we'll perform the authentication operation using a script. On the guest operating system (CentOS 7 in this example) create a file name vaultlogin.sh that handle interacting with the VMware guest info and fetching the secret from Vault.
 

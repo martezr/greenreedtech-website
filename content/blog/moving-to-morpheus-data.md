@@ -1,11 +1,11 @@
 ---
 title: "Moving to Morpheus Data"
 description: "meta description"
-image: "images/post/05.jpg"
+image: "https://s3.us-west-2.amazonaws.com/greenreedtech.com/moving-to-morpheus-data/Morpheus-horizontal-v2.png"
 date: "2021-02-01"
 draft: false
 author: "Martez Reed"
-tags: ["DevOps", "Terraform","VMware"]
+tags: ["Morpheus"]
 categories: ["Career"]
 ---
 

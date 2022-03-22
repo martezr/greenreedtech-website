@@ -2,7 +2,7 @@
 title: "Puppet Bolt Vault Inventory Plugin"
 description: "meta description"
 image: "images/post/05.jpg"
-date: "2021-02-01"
+date: "2019-11-26"
 draft: false
 author: "Martez Reed"
 tags: ["DevOps", "Terraform","VMware"]
