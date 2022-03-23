@@ -74,7 +74,7 @@ color_primary = "#01AD9F"
 
 #################### default parameters ################################
 [params]
-logo = "grt-logo.png"
+logo = "images/grtlogo.png"
 logo_width = "200px"
 favicon = ""
 # Meta data
