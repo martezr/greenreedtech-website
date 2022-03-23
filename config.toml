@@ -1,5 +1,5 @@
 ######################## default configuration ####################
-baseURL = "https://martezr.github.io/greenreedtech-website"
+baseURL = "https://www.greenreedtech.com"
 title = "Green Reed Technology - Technology without boundaries"
 theme = "bookworm-light"
 paginate = "5"
