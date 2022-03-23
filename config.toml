@@ -6,7 +6,7 @@ paginate = "5"
 # post excerpt
 summaryLength = "50"
 # google analytics
-googleAnalytics = "" # example : UA-123-45
+googleAnalytics = "UA-25321150-1" # example : UA-123-45
 # disqus short name
 disqusShortname = "greenreedtech" 
 [permalinks]
@@ -74,7 +74,7 @@ color_primary = "#01AD9F"
 
 #################### default parameters ################################
 [params]
-logo = ""
+logo = "grt-logo.png"
 logo_width = "200px"
 favicon = ""
 # Meta data
