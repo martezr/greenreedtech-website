@@ -1,7 +1,7 @@
 ---
 title: "Vault Audit Logging"
 date: "2018-02-01"
-image: "https://s3.us-west-2.amazonaws.com/greenreedtech.com/deployment-pipeline-chaos-engineering-with-stackstorm-and-chaostoolkit/chaos_update.png"
+image: "https://s3.us-west-2.amazonaws.com/greenreedtech.com/vault_audit_logging/vault_audit_logging_1.png"
 author: "Martez Reed"
 tags: ["HashiCorp","Vault","DevOps","Security"]
 categories: ["Vault"]
@@ -166,7 +166,7 @@ vault write secret/audittest value=testingvaultauditing
 
 Once the command is run we should see a new entry created in the /var/log/vault_audit.log file and after a few minutes we should see a folder created in our S3 bucket for storing our Vault audit logs.
 
-![](images/vault_audit_logging_2.png)
+![](https://s3.us-west-2.amazonaws.com/greenreedtech.com/vault_audit_logging/vault_audit_logging_2.png)
 
 ## References
 

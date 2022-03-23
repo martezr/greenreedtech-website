@@ -1,7 +1,7 @@
 ---
 title: "Detecting HashiCorp Vault Root Login"
 description: "meta description"
-image: "images/post/05.jpg"
+image: "https://s3.us-west-2.amazonaws.com/greenreedtech.com/detecting-hashicorp-vault-root-login/vault_root_login.png"
 date: "2020-02-09"
 draft: false
 author: "Martez Reed"
@@ -81,7 +81,7 @@ auth.display_name="root" type="response" request.path="auth/token/lookup-self"
 
 If there has been a recent login with the root token we should see results from our search similar to those below.
 
-![](images/vault_root_login-1024x585.png)
+![](https://s3.us-west-2.amazonaws.com/greenreedtech.com/detecting-hashicorp-vault-root-login/vault_root_login-1024x585.png)
 
 This can be extended to send a notification or create a helpdesk ticket, most logging platforms have the ability to trigger an action when a designated event occurs. As an example, Splunk supports a handful of alert actions such as sending an email, outputting results to a lookup file or sending a webhook to an external system.
 

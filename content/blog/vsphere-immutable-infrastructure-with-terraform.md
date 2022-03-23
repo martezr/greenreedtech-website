@@ -1,7 +1,7 @@
 ---
 title: "vSphere Immutable Infrastructure with Terraform"
 description: "meta description"
-image: "images/post/05.jpg"
+image: "https://s3.us-west-2.amazonaws.com/greenreedtech.com/vsphere_immutable_infrastructure_with_terraform/vsphere_immutable_infrastructure_with_terraform_1.png"
 date: 2017-10-13T16:56:47+06:00
 draft: false
 author: "Martez Reed"
@@ -29,7 +29,6 @@ Our example application is a node.js application with a Mongodb backend.
 - **Web Server:** Deployment of our web instance is fairly simple as the web server stores no data that needs to persists across iterations of the instance.
 
 - **Database Server:** Deploying an immutable database server is particularly challenging given the requirement that the data in the database must persist across iterations of the instance.
-
 
 Data persistence is achieved by decoupling the data drive or .VMDK file from the instantiation of the virtual machine. The virtual machine is created and attaches an existing hard disk that stores the data for our Mongodb database. When we destroy the database VM the .VMDK file is detached and the virtual machine is destroyed.
 
@@ -65,7 +64,7 @@ All code used in this example can be found on Github.
 
 The second hard drive or data drive for our database instance is the first resource we'll need to create using Terraform. The .VMDK file will be stored in the root of the datastore in this example but can easily be placed into a subfolder for persistent disks.
 
-```
+```bash
 resource "vsphere_virtual_disk" "DBDisk01" {
   size          = 20
   vmdk_path     = "DBDisk01.vmdk"
@@ -78,7 +77,7 @@ resource "vsphere_virtual_disk" "DBDisk01" {
 
 Let's go ahead and run `Terraform apply` to create the data drive.
 
-```
+```bash
 Terraform apply
 ```
 
@@ -90,7 +89,7 @@ The next thing we need to do is create the instance to prep the data drive for u
 
 We need to partition our data drive separate of the database bootstrap script as we only want to partition the data drive only once.
 
-```
+```bash
 #!/bib/bash
 
 # Partition the second disk
@@ -153,13 +152,13 @@ systemctl start mongod
 
 Now we need to run `Terraform apply` to create the instance.
 
-```
+```bash
 Terraform apply
 ```
 
 Once our instance has been successfully bootstrapped using the mongodbprep script we'll need to run the `Terraform destroy` command to destroy our instantiation instance.
 
-```
+```bash
 Terraform destroy
 ```
 
@@ -167,7 +166,7 @@ Terraform destroy
 
 Now that the data drive for our Mongodb VM has been prepped we just need to provision our production instances and start adding data.
 
-```
+```bash
 resource "vsphere_virtual_machine" "Node01" {
   name       = "terraform-node"
   vcpu       = 2
@@ -277,11 +276,13 @@ Let's go ahead and run a `Terraform apply` to build our production instances.
 
 With the node.js app started we should be able to access the example node.js app from our web browser.
 
-[http://web\_instance:8080](http://web_instance:8080)
+[http://web_instance:8080](http://web_instance:8080)
 
+![](https://s3.us-west-2.amazonaws.com/greenreedtech.com/vsphere_immutable_infrastructure_with_terraform/vsphere_immutable_infrastructure_with_terraform_1.png)
 
 Let's add some todo items to the list so we can validate that the data persists across instantiations of the database virtual machine.
 
+![](https://s3.us-west-2.amazonaws.com/greenreedtech.com/vsphere_immutable_infrastructure_with_terraform/vsphere_immutable_infrastructure_with_terraform_2.png)
 
 Add a few tasks to the list, in our example a few whimsical todo items have been added to the list.
 
@@ -293,13 +294,13 @@ Add a few tasks to the list, in our example a few whimsical todo items have been
 
 The last thing we need to do now is to actually test the immutability of our design by destroying and rebuilding the infrastructure. From within the "instances" directory we need to run the `terraform destroy` command to destroy the node.js and database virtual machines.
 
-```
+```bash
 Terraform destroy
 ```
 
 Once both of our VMs are destroyed we need recreate them using `terraform apply` and validate that the todo items are still available in our app.
 
-```
+```bash
 Terraform apply
 ```
 

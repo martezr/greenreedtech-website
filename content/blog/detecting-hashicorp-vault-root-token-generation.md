@@ -1,7 +1,7 @@
 ---
 title: "Detecting HashiCorp Vault Root Token Generation"
 description: "meta description"
-image: "images/post/05.jpg"
+image: "https://s3.us-west-2.amazonaws.com/greenreedtech.com/detecting-hashicorp-vault-root-token-generation/vault_root_token_gen2fixed-1024x568.png"
 date: "2020-05-20"
 draft: false
 author: "Martez Reed"
@@ -29,7 +29,7 @@ The following search string returns the appropriate entry from the Vault audit l
 source="/opt/vault/logs/vault_audit.log" type=response request.path="sys/generate-root/attempt" request.operation="update"
 ```
 
-![](images/vault_root_token_gen_1-1024x538.png)
+![](https://s3.us-west-2.amazonaws.com/greenreedtech.com/detecting-hashicorp-vault-root-token-generation/vault_root_token_gen_1-1024x538.png)
 
 **Successful Root Token Generation**
 
@@ -39,7 +39,7 @@ We want to be able to detect when someone is able to successfully generate a new
 source="/opt/vault/logs/vault_audit.log" type=response request.path="sys/generate-root/update" response.data.complete=true
 ```
 
-![](images/vault_root_token_gen2fixed-1024x568.png)
+![](https://s3.us-west-2.amazonaws.com/greenreedtech.com/detecting-hashicorp-vault-root-token-generation/vault_root_token_gen2fixed-1024x568.png)
 
 ### **References**
 
