@@ -1,7 +1,7 @@
 ---
 title: "Martez Reed"
 image: "images/author/martezreed.jpg"
-email: "abdulmonnafsomrat@gmail.com"
+email: "martez.reed@greenreedtech.com"
 date: 2021-02-02T10:20:19+06:00
 draft: false
 social:
@@ -13,6 +13,4 @@ social:
   link: "https://linkedin.com/in/martezreed"
 ---
 
-Maecenas sit amet purus eget ipsum elementum venenatis. Aenean maximus urna magna elementum venenatis, quis rutrum mi semper non purus eget ipsum elementum venenatis.
-
-Purus eget ipsum elementum venenatis. Aenean maximus urna magna elementum venenatis, quis rutrum mi semper non purus eget ipsum elementum venenatis.
+Solutions architect specializing in automation & orchestration. Interested in configuration management, CI/CD pipelines, infrastructure as code (IaC), and orchestrating disparate pieces of automation.

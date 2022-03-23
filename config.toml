@@ -74,12 +74,12 @@ color_primary = "#01AD9F"
 
 #################### default parameters ################################
 [params]
-logo = "images/logo.png"
+logo = ""
 logo_width = "200px"
-favicon = "images/favicon.png"
+favicon = ""
 # Meta data
-description = "This is meta description"
-author = "Themefisher"
+description = "Technology without boundaries"
+author = "Martez Reed"
 # contact form action
 contact_form_action = "#" # contact form works with https://formspree.io
 # search
@@ -119,13 +119,13 @@ hasChildren = true
   [[menu.main]]
   parent = "HashiCorp"
   name = "Packer"
-  url = "category/packer/"
+  url = "categories/packer/"
   weight = 1
 
   [[menu.main]]
   parent = "HashiCorp"
   name = "Terraform"
-  url = "category/terraform/"
+  url = "categories/terraform/"
   weight = 2
 
   [[menu.main]]
@@ -148,13 +148,13 @@ hasChildren = true
   [[menu.main]]
   parent = "VMware"
   name = "vRO"
-  url = "vro/"
+  url = "categories/vro/"
   weight = 1
 
   [[menu.main]]
   parent = "VMware"
   name = "vRA"
-  url = "vra/"
+  url = "categories/vra/"
   weight = 2
 
 [[menu.main]]
@@ -167,16 +167,6 @@ weight = 7
 name = "About"
 url = "about/"
 weight = 1
-
-[[menu.footer]]
-name = "Privacy"
-url = "privacy/"
-weight = 3
-
-[[menu.footer]]
-name = "Terms & Conditions"
-url = "terms-conditions/"
-weight = 4
 
 # Social Icons
 [[params.social]]
