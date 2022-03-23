@@ -6,7 +6,7 @@ paginate = "5"
 # post excerpt
 summaryLength = "50"
 # google analytics
-googleAnalytics = "UA-25321150-1" # example : UA-123-45
+googleAnalytics = "UA-25321150-1"
 # disqus short name
 disqusShortname = "greenreedtech" 
 [permalinks]
