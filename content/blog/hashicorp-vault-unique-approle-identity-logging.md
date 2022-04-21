@@ -4,7 +4,7 @@ image: "https://www.datocms-assets.com/2885/1620159869-brandvaultprimaryattribut
 date: "2021-12-01"
 author: "Martez Reed"
 tags: ["DevOps","HashiCorp","Security","Vault"]
-categories: ["HashiCorp"]
+categories: ["Vault"]
 draft: false
 ---
 

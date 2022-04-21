@@ -5,8 +5,8 @@ image: "https://s3.us-west-2.amazonaws.com/greenreedtech.com/detecting-hashicorp
 date: "2020-05-20"
 draft: false
 author: "Martez Reed"
-tags: ["DevOps", "Terraform","VMware"]
-categories: ["Career"]
+tags: ["HashiCorp","Vault","DevOps","Security"]
+categories: ["Vault"]
 ---
 
 HashiCorp Vault generates a default root token during installation and best practice dictates that the token should be revoked once the deployment has been setup. There are certain critical operations that can only be carried out by a root token and requires that a new root token be generated. Given the immense power that the root token garners it would be ideal to identify when a root token is generated. In this example we'll utilize the Vault audit log to determine when the process to generate a new root token is started and when it is successfully completed. Splunk will be used as our centralized logging server in this example.

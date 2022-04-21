@@ -5,8 +5,8 @@ image: "https://s3.us-west-2.amazonaws.com/greenreedtech.com/detecting-hashicorp
 date: "2020-02-09"
 draft: false
 author: "Martez Reed"
-tags: ["DevOps", "Terraform","VMware"]
-categories: ["Career"]
+tags: ["HashiCorp","Vault","DevOps","Security"]
+categories: ["Vault"]
 ---
 
 Security of a HashiCorp Vault deployment is of paramount importance given the sensitive nature of the information contained within the platform. During the initial configuration process the root token is used to perform the setup and should be used to create less privileged named accounts. These accounts should be used for day to day administration of the Vault deployment and the root token should only be used in scenarios where it is absolutely necessary. The reason for this is the all-powerful privileges that the root token wields on the platform. Based upon this information it is critical to know whenever the root token is used to log into the Vault deployment and that's what will be covered in this blog post.
