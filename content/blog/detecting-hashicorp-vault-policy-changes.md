@@ -1,25 +1,25 @@
 ---
 title: "Detecting HashiCorp Vault Policy Changes"
 description: "meta description"
-image: "https://s3.us-west-2.amazonaws.com/greenreedtech.com/detecting-hashicorp-vault-root-login/vault_root_login.png"
-date: "2022-04-01"
-draft: true
+image: "images/post/vault-policy-update.jpeg"
+date: "2022-07-13"
+draft: false
 author: "Martez Reed"
 tags: ["HashiCorp","Vault","DevOps","Security"]
 categories: ["Vault"]
 ---
 
-Security of a HashiCorp Vault deployment is of paramount importance given the sensitive nature of the information contained within the platform. During the initial configuration process the root token is used to perform the setup and should be used to create less privileged named accounts. These accounts should be used for day to day administration of the Vault deployment and the root token should only be used in scenarios where it is absolutely necessary. The reason for this is the all-powerful privileges that the root token wields on the platform. Based upon this information it is critical to know whenever the root token is used to log into the Vault deployment and that's what will be covered in this blog post.
+Security of a HashiCorp Vault deployment is of paramount importance given the sensitive nature of the information contained within the platform. Policies within the platform are used to grant and deny access to the sensitive information stored in the platform.
 
-All operations in HashiCorp Vault are audited and can be sent to an audit log or syslog that is ultimately shipped to a centralized logging server for greater security. In this example we want to utilize the audit log to find out when a policy is changed outside of the CI/CD process used to define all of our policies using code. We'll use Splunk for our centralized logging server.
+All operations in HashiCorp Vault are audited and can be shipped to a centralized logging server. In this scenario we want to utilize the audit log to find out when a policy is changed outside of the CI/CD process used to define all of our policies using code.
 
 ### Vault Configuration
 
-The Vault instance needs to be configured to ship the log files to our logging server and in this example the logging server is a Splunk instance. This post assumes that you know how to configure Vault audit logging and ship the logs to a centralized logging server. Details on how to configure this are configured in a previous post ([https://www.greenreedtech.com/vault-audit-logging/](https://www.greenreedtech.com/vault-audit-logging/)) but at a high level audit logging must be enabled in Vault, configured to write to a log file or syslog and configured to ship those logs to a centralized logging server.
+The Vault instance needs to be configured to ship the log files to our logging server and in this example we're using a combination of [Vector](https://vector.dev/), [NATS](https://nats.io/) and Golang. This post assumes that you know how to configure Vault audit logging and ship the logs to a centralized logging server. Details on how to configure this are covered in a previous post ([https://www.greenreedtech.com/vault-audit-logging/](https://www.greenreedtech.com/vault-audit-logging/)).
 
-### Splunk Configuration
+### Audit Log Example
 
-With the audit log now being shipped to our Splunk instance we can see the operations occurring in the Vault cluster. Now we need to figure out what a policy change looks like in the audit log. The easiest way to do this was to perform a policy change and identify what that operation was from a log perspective. The payload below is a policy create/update event.
+Once the audit log has been configured and the logs are being shipped we can see the operations occurring in the Vault cluster. Now we need to figure out what a policy change looks like in the audit log. The easiest way to do this is to perform a policy change and identify what that operation is from a log perspective. The payload below is a policy create/update event.
 
 ```json
 {
@@ -59,17 +59,41 @@ With the audit log now being shipped to our Splunk instance we can see the opera
 }
 ```
 
-Now that we know what we want to look for we can create our Splunk search string. The search string looks for any update (create or update) operations at the `sys/policies/acl` path.
+Now that we know what the log entry looks like, we're able to create the logic to find update events.
+
+The example below keys in on the path of the request, the operation which is an update, the type which is the response to the request and finally the display name of the user account.
 
 ```bash
-"request.path"="sys/policies/acl/*" "request.operation"=update type=request "auth.display_name"!=vaultci
+request["path"] = "sys/policies/acl/*" 
+request["operation"] = update 
+type = response 
+auth["display_name"] != vaultci
 ```
 
-If there has been a recent policy change by a user outside of the CI/CD pipeline service account we should see results from our search similar to those below.
+If there has been a recent policy change by a user outside of the CI/CD pipeline service account, vaultci in this case then the event should be flagged.
 
-![](https://s3.us-west-2.amazonaws.com/greenreedtech.com/detecting-hashicorp-vault-root-login/vault_root_login-1024x585.png)
+The following code is an example of a solution used for testing Vault events and sends a slack message when a policy update is detected.
 
-This can be extended to send a notification as well taking active remediation by automatically deleting the new policy.
+```go
+func PolicyUpdate(entry utils.AuditLogEntry) {
+	if entry.Type == "response" &&
+		strings.Contains(entry.Request.Path, "sys/policies/acl") &&
+    entry.Auth.DisplayName != "vaultci" &&
+		entry.Request.Operation == "update" {
+		policypath := strings.Split(entry.Request.Path, "/")
+		policyName := policypath[len(policypath)-1]
+
+		var message string
+		if entry.Auth.DisplayName == "token" {
+			message = fmt.Sprintf("An out of band policy change has been made to the %s policy by %s", policyName, "root")
+		} else {
+			message = fmt.Sprintf("An out of band policy change has been made to the %s policy by %s", policyName, entry.Auth.DisplayName)
+		}
+		actions.SendSlackMessage("Vault Policy Update Alert", policyName, message)
+		fmt.Println("Update detected")
+	}
+}
+```
 
 ### References
 
@@ -78,7 +102,3 @@ The following content was used to create this blog post.
 **Vault Production Guide**
 
 [https://www.vaultproject.io/guides/operations/production](https://www.vaultproject.io/guides/operations/production)
-
-**Splunk Alert Webhooks**
-
-[https://docs.splunk.com/Documentation/Splunk/8.0.1/Alert/Webhooks](https://docs.splunk.com/Documentation/Splunk/8.0.1/Alert/Webhooks)
