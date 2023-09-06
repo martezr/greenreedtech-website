@@ -5,6 +5,7 @@
     <link>https://www.greenreedtech.com/tags/aws/</link>
     <description>Recent content in aws on Green Reed Technology - Technology without boundaries</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
     <lastBuildDate>Mon, 30 Oct 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://www.greenreedtech.com/tags/aws/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Terraform AWS S3 State Management Least Privilege</title>

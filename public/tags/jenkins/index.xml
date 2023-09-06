@@ -5,6 +5,7 @@
     <link>https://www.greenreedtech.com/tags/jenkins/</link>
     <description>Recent content in Jenkins on Green Reed Technology - Technology without boundaries</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
     <lastBuildDate>Thu, 14 Jul 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://www.greenreedtech.com/tags/jenkins/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Jenkins Certified Engineer: Folders</title>
@@ -15,7 +16,7 @@
       <description>This post covers the section listed below on the Certified Jenkins Engineer (CJE) exam.
 Section #3: Building Continuous Delivery (CD) Pipelines
 Folders
- How to control access to items in Jenkins with folders Referencing jobs in folders  What are folders? Jenkins provides the ability to organize jobs into a hierarchical manner with the CloudBees Folders Plugin.</description>
+How to control access to items in Jenkins with folders Referencing jobs in folders What are folders? Jenkins provides the ability to organize jobs into a hierarchical manner with the CloudBees Folders Plugin.</description>
     </item>
     
     <item>
@@ -27,7 +28,7 @@ Folders
       <description>This post covers the section listed below on the Certified Jenkins Engineer (CJE) exam.
 Section #1: Key CI/CD/Jenkins Concepts
 Fingerprints
- What are fingerprints? How do fingerprints work?  What are fingerprints? Jenkins utilizes fingerprints for tracking a specific instance of a file. This is critically important when attempting to determine which particular version of a file was used during a build.</description>
+What are fingerprints? How do fingerprints work? What are fingerprints? Jenkins utilizes fingerprints for tracking a specific instance of a file. This is critically important when attempting to determine which particular version of a file was used during a build.</description>
     </item>
     
     <item>

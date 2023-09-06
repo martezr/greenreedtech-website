@@ -5,6 +5,7 @@
     <link>https://www.greenreedtech.com/tags/puppet/</link>
     <description>Recent content in Puppet on Green Reed Technology - Technology without boundaries</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
     <lastBuildDate>Sun, 06 Oct 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://www.greenreedtech.com/tags/puppet/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Puppet Bolt Terraform Inventory Plugin</title>
@@ -40,8 +41,8 @@
       
       <guid>https://www.greenreedtech.com/puppet-policy-based-autosigning-with-vra7/</guid>
       <description>What is Policy Based Autosigning A critical aspect of any Puppet deployment is determining how we want to allow nodes to get their certificate signed by the Puppet master. Before we delve into policy based autosigning we&amp;rsquo;ll discuss the other three methods for managing certificate signing.
-  Manual
- Manually signing certs breaks automated deployment processes.</description>
+Manual
+Manually signing certs breaks automated deployment processes.</description>
     </item>
     
     <item>

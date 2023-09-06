@@ -5,6 +5,7 @@
     <link>https://www.greenreedtech.com/tags/terraform/</link>
     <description>Recent content in Terraform on Green Reed Technology - Technology without boundaries</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
     <lastBuildDate>Tue, 17 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.greenreedtech.com/tags/terraform/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>HashiCorp Terraform Checksum Verification</title>
@@ -69,7 +70,7 @@ Ensuring the integrity of software is important to help prevent a malicious acto
       <guid>https://www.greenreedtech.com/vsphere-immutable-infrastructure-with-terraform/</guid>
       <description>What is immutable infrastructure? Immutable infrastructure is the concept of utilizing an infrastructure component in an ephemeral manner. This means that the component can be destroyed and recreated at will without major impact.
 Advantages
- Troublesome instances can easily be destroyed and recreated. System patching processes are replaced by just provisioning instances from a new template.</description>
+Troublesome instances can easily be destroyed and recreated. System patching processes are replaced by just provisioning instances from a new template.</description>
     </item>
     
     <item>

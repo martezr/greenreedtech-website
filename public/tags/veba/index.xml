@@ -5,6 +5,7 @@
     <link>https://www.greenreedtech.com/tags/veba/</link>
     <description>Recent content in VEBA on Green Reed Technology - Technology without boundaries</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
     <lastBuildDate>Fri, 12 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.greenreedtech.com/tags/veba/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Creating a VMware Event Broker Appliance (VEBA) Golang Function</title>

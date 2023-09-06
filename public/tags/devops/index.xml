@@ -5,6 +5,7 @@
     <link>https://www.greenreedtech.com/tags/devops/</link>
     <description>Recent content in DevOps on Green Reed Technology - Technology without boundaries</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
     <lastBuildDate>Wed, 13 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.greenreedtech.com/tags/devops/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Detecting HashiCorp Vault Policy Changes</title>
@@ -189,7 +190,7 @@ One of the challenges is ensuring that the installation of your security platfor
       <guid>https://www.greenreedtech.com/vsphere-immutable-infrastructure-with-terraform/</guid>
       <description>What is immutable infrastructure? Immutable infrastructure is the concept of utilizing an infrastructure component in an ephemeral manner. This means that the component can be destroyed and recreated at will without major impact.
 Advantages
- Troublesome instances can easily be destroyed and recreated. System patching processes are replaced by just provisioning instances from a new template.</description>
+Troublesome instances can easily be destroyed and recreated. System patching processes are replaced by just provisioning instances from a new template.</description>
     </item>
     
     <item>
@@ -211,7 +212,7 @@ This post will cover posting alarm information to Slack via StackStorm. In addit
       <description>This post covers the section listed below on the Certified Jenkins Engineer (CJE) exam.
 Section #3: Building Continuous Delivery (CD) Pipelines
 Folders
- How to control access to items in Jenkins with folders Referencing jobs in folders  What are folders? Jenkins provides the ability to organize jobs into a hierarchical manner with the CloudBees Folders Plugin.</description>
+How to control access to items in Jenkins with folders Referencing jobs in folders What are folders? Jenkins provides the ability to organize jobs into a hierarchical manner with the CloudBees Folders Plugin.</description>
     </item>
     
     <item>
@@ -223,7 +224,7 @@ Folders
       <description>This post covers the section listed below on the Certified Jenkins Engineer (CJE) exam.
 Section #1: Key CI/CD/Jenkins Concepts
 Fingerprints
- What are fingerprints? How do fingerprints work?  What are fingerprints? Jenkins utilizes fingerprints for tracking a specific instance of a file. This is critically important when attempting to determine which particular version of a file was used during a build.</description>
+What are fingerprints? How do fingerprints work? What are fingerprints? Jenkins utilizes fingerprints for tracking a specific instance of a file. This is critically important when attempting to determine which particular version of a file was used during a build.</description>
     </item>
     
     <item>
