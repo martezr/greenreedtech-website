@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>VEBA on Green Reed Technology - Technology without boundaries</title>
+    <link>https://www.greenreedtech.com/tags/veba/</link>
+    <description>Recent content in VEBA on Green Reed Technology - Technology without boundaries</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 12 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.greenreedtech.com/tags/veba/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Creating a VMware Event Broker Appliance (VEBA) Golang Function</title>
+      <link>https://www.greenreedtech.com/creating-a-vmware-event-broker-appliance-veba-golang-function/</link>
+      <pubDate>Fri, 12 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.greenreedtech.com/creating-a-vmware-event-broker-appliance-veba-golang-function/</guid>
+      <description>The VMware Event Broker Appliance (VEBA) fling is a really interesting project that enables administrators to take advantage of event driven automation in a VMware vSphere environment. I&amp;rsquo;ve been meaning to kick the tires on using the appliance as I&amp;rsquo;ve thought a lot about vSphere event driven security and what that looks like from a technical implementation perspective.</description>
+    </item>
+    
+  </channel>
+</rss>

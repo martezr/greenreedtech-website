@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Splunk on Green Reed Technology - Technology without boundaries</title>
+    <link>https://www.greenreedtech.com/tags/splunk/</link>
+    <description>Recent content in Splunk on Green Reed Technology - Technology without boundaries</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 01 May 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://www.greenreedtech.com/tags/splunk/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>vRealize Automation 7.2 hardening compliance with vRO and Splunk</title>
+      <link>https://www.greenreedtech.com/vrealize-automation-7.2-hardening-compliance-with-vro-and-splunk/</link>
+      <pubDate>Mon, 01 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.greenreedtech.com/vrealize-automation-7.2-hardening-compliance-with-vro-and-splunk/</guid>
+      <description>In this post we&amp;rsquo;ll walk through how we can utilize vRealize Orchestrator and Splunk to determine how compliant our vRA appliance is with the vRealize Automation 7.2 hardening guide.
+vRA 7.2 hardening compliance script The first task is utilizing a script to check the settings specified in the hardening guide. In our case we&amp;rsquo;re going to generate JSON output from the script in order to easily ingest the data into Splunk.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nomad on Green Reed Technology - Technology without boundaries</title>
+    <link>https://www.greenreedtech.com/categories/nomad/</link>
+    <description>Recent content in Nomad on Green Reed Technology - Technology without boundaries</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 27 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.greenreedtech.com/categories/nomad/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Deploying HashiCorp Nomad Cluster on vSphere in Two Minutes</title>
+      <link>https://www.greenreedtech.com/deploying-hashicorp-nomad-cluster-on-vsphere-in-two-minutes/</link>
+      <pubDate>Wed, 27 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.greenreedtech.com/deploying-hashicorp-nomad-cluster-on-vsphere-in-two-minutes/</guid>
+      <description>Kubernetes has become the defacto standard for container orchestration platforms. One of the issue that people have with Kubernetes is its often overwhelming complexity with the number of different moving parts. This is where a platform like HashiCorp Nomad fills the gap to provide a simpler solution that is equally robust from a scaling perspective.</description>
+    </item>
+    
+  </channel>
+</rss>

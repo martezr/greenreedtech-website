@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>vra on Green Reed Technology - Technology without boundaries</title>
+    <link>https://www.greenreedtech.com/tags/vra/</link>
+    <description>Recent content in vra on Green Reed Technology - Technology without boundaries</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 26 May 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://www.greenreedtech.com/tags/vra/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>vRA 7.2 dynamic property list from REST API</title>
+      <link>https://www.greenreedtech.com/vra-7.2-dynamic-property-list-from-rest-api/</link>
+      <pubDate>Fri, 26 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.greenreedtech.com/vra-7.2-dynamic-property-list-from-rest-api/</guid>
+      <description>In this post we&amp;rsquo;re going to walk through how to dynamically populate a vRA request field using values retrieved from a REST API using vRO.
+A common scenario when working with any software is wanting to test against multiple versions of the software.
+In this example we&amp;rsquo;re going to dynamically fetch the software version of StackStorm (https://stackstorm.</description>
+    </item>
+    
+    <item>
+      <title>vRealize Automation 7.2 hardening compliance with vRO and Splunk</title>
+      <link>https://www.greenreedtech.com/vrealize-automation-7.2-hardening-compliance-with-vro-and-splunk/</link>
+      <pubDate>Mon, 01 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.greenreedtech.com/vrealize-automation-7.2-hardening-compliance-with-vro-and-splunk/</guid>
+      <description>In this post we&amp;rsquo;ll walk through how we can utilize vRealize Orchestrator and Splunk to determine how compliant our vRA appliance is with the vRealize Automation 7.2 hardening guide.
+vRA 7.2 hardening compliance script The first task is utilizing a script to check the settings specified in the hardening guide. In our case we&amp;rsquo;re going to generate JSON output from the script in order to easily ingest the data into Splunk.</description>
+    </item>
+    
+    <item>
+      <title>vRA7 Chatops with StackStorm</title>
+      <link>https://www.greenreedtech.com/vra7-chatops-with-stackstorm/</link>
+      <pubDate>Fri, 17 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.greenreedtech.com/vra7-chatops-with-stackstorm/</guid>
+      <description>ChatOps is a pretty cool and still emerging technology that allows users to initiate actions on external systems from within a messaging platform such as slack. There are already bots available from vendors such as opvizor (http://www.opvizor.com/opbot/) that provide this functionality in a productized solution. In the case of opvizor, their bot interacts with VMware vSphere.</description>
+    </item>
+    
+    <item>
+      <title>Puppet Policy Based Autosigning with vRA7</title>
+      <link>https://www.greenreedtech.com/puppet-policy-based-autosigning-with-vra7/</link>
+      <pubDate>Thu, 09 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.greenreedtech.com/puppet-policy-based-autosigning-with-vra7/</guid>
+      <description>What is Policy Based Autosigning A critical aspect of any Puppet deployment is determining how we want to allow nodes to get their certificate signed by the Puppet master. Before we delve into policy based autosigning we&amp;rsquo;ll discuss the other three methods for managing certificate signing.
+  Manual
+ Manually signing certs breaks automated deployment processes.</description>
+    </item>
+    
+  </channel>
+</rss>

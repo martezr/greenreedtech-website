@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>NSX on Green Reed Technology - Technology without boundaries</title>
+    <link>https://www.greenreedtech.com/tags/nsx/</link>
+    <description>Recent content in NSX on Green Reed Technology - Technology without boundaries</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 02 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.greenreedtech.com/tags/nsx/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>VMware NSX&#43;</title>
+      <link>https://www.greenreedtech.com/vmware-nsx-/</link>
+      <pubDate>Sat, 02 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.greenreedtech.com/vmware-nsx-/</guid>
+      <description>VMware recently presented at the Tech Field Day Extra event during VMware Explore 2023. The presentation covered VMware&amp;rsquo;s networking and security product updates.
+VMware is most known for it&amp;rsquo;s flagship VMware vSphere product (ESXi and vCenter) that enables organizations to run on-prem workloads in a virtualized fashion.
+NSX is a complimentary network virtualization solution that provides a way to effectively abstract the underlying network and offer network functions like routing, load balancing, distributed firewalls, and more.</description>
+    </item>
+    
+  </channel>
+</rss>

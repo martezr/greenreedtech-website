@@ -12,7 +12,6 @@ Organizations are faced with the daunting challenge of constantly working to kee
 
 The first tactical step in developing an autonomous patching solution is being able to dynamically fetch the current version that the system is running. Most platforms have an API endpoint in which the current or active version can be retrieved from. Some platforms require authentication in order to retrieve the current version for security reasons.
 
-
 In our scenario we'll take a look at what's required to retrieve the version from a GitLab CE instance. GitLab requires an access token to authenticate, the instructions to create the token are found here in the Gitlab docs (https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html#create-a-personal-access-token). The following python script retrives the version from a GitLab CE instance.
 
 ```python

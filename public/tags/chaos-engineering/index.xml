@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Chaos Engineering on Green Reed Technology - Technology without boundaries</title>
+    <link>https://www.greenreedtech.com/tags/chaos-engineering/</link>
+    <description>Recent content in Chaos Engineering on Green Reed Technology - Technology without boundaries</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 24 Jun 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://www.greenreedtech.com/tags/chaos-engineering/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Deployment Pipeline Chaos Engineering with StackStorm and ChaosToolkit</title>
+      <link>https://www.greenreedtech.com/deployment-pipeline-chaos-engineering-with-stackstorm-and-chaostoolkit/</link>
+      <pubDate>Wed, 24 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.greenreedtech.com/deployment-pipeline-chaos-engineering-with-stackstorm-and-chaostoolkit/</guid>
+      <description>Chaos Engineering is the practice of experimenting or injecting faults into a system to test how the system responds to the failure (https://principlesofchaos.org). Chaos Engineering is still new for many organizations and can be a daunting practice to adopt at first but even baby steps into the practice can be immediately beneficial.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -157,6 +157,12 @@ hasChildren = true
   url = "categories/vra/"
   weight = 2
 
+  [[menu.main]]
+  parent = "VMware"
+  name = "NSX"
+  url = "categories/nsx/"
+  weight = 3
+
 [[menu.main]]
 name = "About"
 url = "about/"

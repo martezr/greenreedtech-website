@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Containers on Green Reed Technology - Technology without boundaries</title>
+    <link>https://www.greenreedtech.com/tags/containers/</link>
+    <description>Recent content in Containers on Green Reed Technology - Technology without boundaries</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 22 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.greenreedtech.com/tags/containers/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Building a Lightweight Container Host for VMware vSphere</title>
+      <link>https://www.greenreedtech.com/building-a-lightweight-container-host-for-vmware-vsphere/</link>
+      <pubDate>Fri, 22 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.greenreedtech.com/building-a-lightweight-container-host-for-vmware-vsphere/</guid>
+      <description>Containerization and Kubernetes have dominated the IT conversation for the last handful of years. Containers enable rapid development, application portability and a myriad of other benefits. Containers rely on a host operating system in order to run and ideally it would be one that is extremely lightweight since the apps running in the containers are what we really care about.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Terraform on Green Reed Technology - Technology without boundaries</title>
+    <link>https://www.greenreedtech.com/tags/terraform/</link>
+    <description>Recent content in Terraform on Green Reed Technology - Technology without boundaries</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 17 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.greenreedtech.com/tags/terraform/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HashiCorp Terraform Checksum Verification</title>
+      <link>https://www.greenreedtech.com/hashicorp-terraform-checksum-verification/</link>
+      <pubDate>Tue, 17 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.greenreedtech.com/hashicorp-terraform-checksum-verification/</guid>
+      <description>How do we verify that the Terraform binary we download is the same as the one HashiCorp produced?
+Ensuring the integrity of software is important to help prevent a malicious actor from tricking us into using a modified version of Terraform as well as ensuring the version we&amp;rsquo;re using isn&amp;rsquo;t corrupted.</description>
+    </item>
+    
+    <item>
+      <title>HashiCorp Terraform Code Signing</title>
+      <link>https://www.greenreedtech.com/hashicorp-terraform-code-signing/</link>
+      <pubDate>Mon, 16 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.greenreedtech.com/hashicorp-terraform-code-signing/</guid>
+      <description>Signing software has become critically important given the recent supply chain attacks. How do we verify that the software we&amp;rsquo;re downloading is actually created by who believe created the software? In this case we want to ensure that the Terraform binary we&amp;rsquo;re downloading was created by HashiCorp. This helps prevent a scenario where a malicious actor tricks you into downloading a compromised version of Terraform.</description>
+    </item>
+    
+    <item>
+      <title>Puppet Bolt Vault Inventory Plugin</title>
+      <link>https://www.greenreedtech.com/puppet-bolt-vault-inventory-plugin/</link>
+      <pubDate>Tue, 26 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.greenreedtech.com/puppet-bolt-vault-inventory-plugin/</guid>
+      <description>In this blog post we&amp;rsquo;ll look at the HashiCorp Vault plugin for Puppet Bolt that enables authentication credentials for Bolt to be retrieved from an instance of HashiCorp Vault. HashiCorp Vault is a secrets management platform that is commonly used to store secrets such as API keys, passwords and SSH private keys.</description>
+    </item>
+    
+    <item>
+      <title>Puppet Bolt Terraform Inventory Plugin</title>
+      <link>https://www.greenreedtech.com/puppet-bolt-terraform-inventory-plugin/</link>
+      <pubDate>Sun, 06 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.greenreedtech.com/puppet-bolt-terraform-inventory-plugin/</guid>
+      <description>HashiCorp Terraform is a popular Infrastructure as Code (IaC) tool that is used for provisioning virtual machines or cloud instances along with other resources. Once a virtual machine or cloud instance is provisioned typically it still needs to be configured which includes security baselines, application dependency configuration and even application deployment.</description>
+    </item>
+    
+    <item>
+      <title>Terraform Puppet Provisioner</title>
+      <link>https://www.greenreedtech.com/terraform-puppet-provisioner/</link>
+      <pubDate>Wed, 10 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.greenreedtech.com/terraform-puppet-provisioner/</guid>
+      <description>HashiCorp Terraform 0.12.2 added official support for a Puppet provisioner. One caveat is that the provisioner is only available in 0.12.x of Terraform. The provisioner provides a number of features such as adding data to the CSR for trusted facts, selecting between open source and enterprise agent versions along with autosigning the CSR.</description>
+    </item>
+    
+    <item>
+      <title>Terraform AWS S3 State Management Least Privilege</title>
+      <link>https://www.greenreedtech.com/terraform-aws-s3-state-management-least-privilege/</link>
+      <pubDate>Mon, 30 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.greenreedtech.com/terraform-aws-s3-state-management-least-privilege/</guid>
+      <description>A very popular Terraform state management configuration is to utilize AWS S3 for state management and AWS DynamoDB for state locking. The problem is that there does not appear to be a publicly available document that details the minimum privileges required by an AWS user or role to leverage AWS S3 and DynamoDB for Terraform state management.</description>
+    </item>
+    
+    <item>
+      <title>vSphere Immutable Infrastructure with Terraform</title>
+      <link>https://www.greenreedtech.com/vsphere-immutable-infrastructure-with-terraform/</link>
+      <pubDate>Fri, 13 Oct 2017 16:56:47 +0600</pubDate>
+      
+      <guid>https://www.greenreedtech.com/vsphere-immutable-infrastructure-with-terraform/</guid>
+      <description>What is immutable infrastructure? Immutable infrastructure is the concept of utilizing an infrastructure component in an ephemeral manner. This means that the component can be destroyed and recreated at will without major impact.
+Advantages
+ Troublesome instances can easily be destroyed and recreated. System patching processes are replaced by just provisioning instances from a new template.</description>
+    </item>
+    
+    <item>
+      <title>Jenkins Job Builder</title>
+      <link>https://www.greenreedtech.com/jenkins-job-builder/</link>
+      <pubDate>Wed, 13 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.greenreedtech.com/jenkins-job-builder/</guid>
+      <description>Recently a co-worker of mine (Thanks Ken Erwin) introduced me to Jenkins Job Builder (http://docs.openstack.org/infra/jenkins-job-builder/) which is a project created by the OpenStack infrastructure team that aims to automate the creation of Jenkins Jobs. The software is written in python and utilizes either yaml or json files as the framework for creating Jenkins jobs.</description>
+    </item>
+    
+  </channel>
+</rss>
