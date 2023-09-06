@@ -87,7 +87,7 @@ search = true
 # main section
 mainSections = ["blog"]
 # copyright
-copyright = "Copyright © 2022 Green Reed Technology. All rights reserved."
+copyright = "Copyright © 2023 Green Reed Technology. All rights reserved."
 
 # Preloader
 [params.preloader]
@@ -186,3 +186,7 @@ url = "https://www.youtube.com/greenreedtech"
 [[params.social]]
 icon = "lab la-linkedin-in" # https://icons8.com/line-awesome
 url = "https://www.linkedin.com/in/martezreed"
+
+[[params.social]]
+icon = "las la-rss" # https://icons8.com/line-awesome
+url = "https://www.greenreedtech.com/index.xml"
