@@ -19,7 +19,7 @@ Identifying active root tokens requires us to query the Vault instance and evalu
 
 The following are the minimum Vault permissions required to perform this search on the Vault deployment.
 
-```
+```bash
 # List token accessors
 path "auth/token/accessors/"
 {
@@ -87,7 +87,9 @@ If there are any active root tokens a table similar to the table below will be d
 
 If there are root tokens identified at that point we likely want to revoke them and that can be done by running the `vault token revoke` command and adding the `-accessor` switch with the token accessor displayed in the script output table similar to the full command below.
 
-`vault token revoke -accessor xooFDg520Sh3LFfL7QOERsQN`
+```bash
+vault token revoke -accessor xooFDg520Sh3LFfL7QOERsQN
+```
 
 The root token will have been revoked and re-running the script should return a result of no active root tokens.
 

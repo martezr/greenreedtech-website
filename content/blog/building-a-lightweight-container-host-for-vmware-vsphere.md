@@ -6,7 +6,7 @@ date: "2022-04-22"
 draft: false
 author: "Martez Reed"
 tags: ["DevOps","Containers"]
-categories: ["vSphere"]
+categories: ["VMware"]
 ---
 
 Containerization and Kubernetes have dominated the IT conversation for the last handful of years. Containers enable rapid development, application portability and a myriad of other benefits. Containers rely on a host operating system in order to run and ideally it would be one that is extremely lightweight since the apps running in the containers are what we really care about.

@@ -12,21 +12,22 @@ categories: ["Nomad"]
 Kubernetes has become the defacto standard for container orchestration platforms. One of the issue that people have with Kubernetes is its often overwhelming complexity with the number of different moving parts. This is where a platform like HashiCorp Nomad fills the gap to provide a simpler solution that is equally robust from a scaling perspective.
 
 
-## LinuxKit for the Win
+### LinuxKit for the Win
 In previous blog posts I've talked about the benefits of LinuxKit and how it can be used to quickly deploy a container host. Well, since Nomad is a container orchestrator, it comes as no surprise that container hosts would be needed.
 
 
-## Nomad in a Container (Thanks Resinstack)
+### Nomad in a Container (Thanks Resinstack)
 
 https://github.com/resinstack/nomad
 
-## Nomad ContainerD Task Driver (Thanks Roblox)
+**Nomad ContainerD Task Driver (Thanks Roblox)**
 
 Nomad supports different types of tasks
 With ContainerD 
 
-## 
-## Terraform
+### Terraform
+
+The following Terraform is an example of the configuration used to deploy a three (3) server and three (3) agent system.
 
 ```hcl
 provider "vsphere" {

@@ -1,11 +1,11 @@
 ---
 title: "Jenkins Job Builder"
-description: "test"
+description: "Jenkins Job Builder introduction"
 date: "2016-01-13"
 draft: false
 author: "Martez Reed"
-tags: ["DevOps", "Terraform","VMware"]
-categories: ["Terraform"]
+tags: ["DevOps", "Jenkins"]
+categories: ["DevOps"]
 ---
 
 Recently a co-worker of mine (Thanks Ken Erwin) introduced me to Jenkins Job Builder ([http://docs.openstack.org/infra/jenkins-job-builder/](http://docs.openstack.org/infra/jenkins-job-builder/)) which is a project created by the OpenStack infrastructure team that aims to automate the creation of Jenkins Jobs. The software is written in python and utilizes either yaml or json files as the framework for creating Jenkins jobs. A list of some of the primary features is provided below.

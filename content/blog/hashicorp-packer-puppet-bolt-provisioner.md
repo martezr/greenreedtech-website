@@ -67,12 +67,15 @@ EOF
 
 This step creates a Bolt Puppetfile for installing the two Puppet modules required by the Terraform Puppet provisioner.
 
-# Modules from the Puppet Forge.
+**Modules from the Puppet Forge**
+
+```bash
 mod 'KyleAnderson-consul', '5.1.0'
 mod 'puppetlabs-stdlib', '5.2.0'
 mod 'puppet-archive', '3.2.1'
 mod 'camptocamp-systemd', '2.6.0'
 mod 'puppetlabs-powershell', '2.3.0'
+```
 
 **Bolt Plan**
 
