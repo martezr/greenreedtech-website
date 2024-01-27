@@ -88,7 +88,7 @@ search = true
 # main section
 mainSections = ["blog"]
 # copyright
-copyright = "Copyright © 2023 Green Reed Technology. All rights reserved."
+copyright = "Copyright © 2024 Green Reed Technology. All rights reserved."
 
 # Preloader
 [params.preloader]
