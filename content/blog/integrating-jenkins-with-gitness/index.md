@@ -1,7 +1,9 @@
 ---
 title: "Integrating Gitness with Jenkins"
 date: "2024-04-23"
+description: "This blog post walks through integrating the Gitness source control system with the Jenkins CI server"
 image: "images/post/jenkins-logo.png"
+twitterimage: 'jenkins-logo.png'
 author: "Martez Reed"
 categories: ["DevOps"]
 tags: ["DevOps"]
