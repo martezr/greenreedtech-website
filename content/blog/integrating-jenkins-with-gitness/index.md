@@ -1,7 +1,7 @@
 ---
 title: "Integrating Gitness with Jenkins"
 date: "2024-04-23"
-image: "images/post/integrating-jenkins-with-gitness-job-output.png"
+image: "images/post/jenkins-logo.png"
 author: "Martez Reed"
 categories: ["DevOps"]
 tags: ["DevOps"]
