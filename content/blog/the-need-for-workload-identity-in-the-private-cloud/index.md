@@ -32,7 +32,7 @@ The same reasons we’ve come to love workload identity in the public cloud as w
 
 * **Workload Identity Federation:** More public cloud providers are actively acknowledging that their cloud isn’t the only game in town. GCP and AWS, for example, have solutions for trusting an identity from the other cloud. This could be used to seamlessly access GCP cloud storage from an AWS EC2 instance. The same could also, in theory, be done from a private cloud.
 * **Improved Security Posture:** Long-lived credentials pose a security risk and are generally more cumbersome to rotate should there be a security incident. A workload identity solution would automate the rotation of the credentials used and restrict the lifetime of an associated credential.
-* **Identity Uniqueness Assurance:** This is technically possible with a service account or x509 certificate, but a workload identity solution provides greater assurance that the identity is truly unique.
+* **Identity Uniqueness Assurance:** This is technically possible with a service account or x509 certificate assuming that a one-to-one mapping is strictly adhered to. A workload identity solution provides greater assurance that the identity is truly unique through it's inherent design as well as the automation leveraged to generate the identity.
 * **Cloud Operating Model Alignment:** This is a capability that public cloud providers have provided for years and is a widely adopted pattern that provides tremendous value. It only makes sense for the private cloud to provide a similar capability to enable a unified experience.
 
 ### So, where’s the workload identity in the private cloud? 
