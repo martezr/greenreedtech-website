@@ -24,7 +24,7 @@ The most frequently used method for machine authentication is a username and pas
 
 ### What about x509 Certificates?
 
-Let’s start with the fact that public Key Infrastructure (PKI) and certificates are notoriously difficult for most organizations. Certificates suffer from many of the same problems as usernames and passwords, such as the need to rotate them. Many solutions, such as service meshes, use TLS certificates to enable mutual authentication (mTLS) between workloads. This works well but is tightly coupled to the service mesh deployment, which may not work for non-Kubernetes workloads. This means that every workload in the environment can’t take advantage of this capability.
+Let’s start with the fact that Public Key Infrastructure (PKI) and certificates are notoriously difficult implement and manage for most organizations. Certificates suffer from many of the same problems as usernames and passwords, such as the need to rotate them. Many solutions, such as service meshes, use TLS certificates to enable mutual authentication (mTLS) between workloads. This works well but is tightly coupled to the service mesh deployment, which may not work for non-Kubernetes workloads. This means that every workload in the environment can’t take advantage of this capability.
 
 ### So, why do we need workload identity in the private cloud? 
 
