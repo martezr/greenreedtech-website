@@ -1,7 +1,17 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Jenkins on Green Reed Technology - Technology without boundaries</title><link>https://www.greenreedtech.com/categories/jenkins/</link><description>Recent content in Jenkins on Green Reed Technology - Technology without boundaries</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 14 Jul 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://www.greenreedtech.com/categories/jenkins/index.xml" rel="self" type="application/rss+xml"/><item><title>Jenkins Certified Engineer: Folders</title><link>https://www.greenreedtech.com/jenkins-certified-engineer-folders/</link><pubDate>Thu, 14 Jul 2016 00:00:00 +0000</pubDate><guid>https://www.greenreedtech.com/jenkins-certified-engineer-folders/</guid><description>This post covers the section listed below on the Certified Jenkins Engineer (CJE) exam.
-Section #3: Building Continuous Delivery (CD) Pipelines
-Folders
-How to control access to items in Jenkins with folders Referencing jobs in folders What are folders? Jenkins provides the ability to organize jobs into a hierarchical manner with the CloudBees Folders Plugin.</description></item><item><title>Jenkins Certified Engineer: Fingerprints</title><link>https://www.greenreedtech.com/jenkins-certified-engineer-fingerprints/</link><pubDate>Tue, 15 Mar 2016 00:00:00 +0000</pubDate><guid>https://www.greenreedtech.com/jenkins-certified-engineer-fingerprints/</guid><description>This post covers the section listed below on the Certified Jenkins Engineer (CJE) exam.
-Section #1: Key CI/CD/Jenkins Concepts
-Fingerprints
-What are fingerprints? How do fingerprints work? What are fingerprints? Jenkins utilizes fingerprints for tracking a specific instance of a file. This is critically important when attempting to determine which particular version of a file was used during a build.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Jenkins on Green Reed Technology - Technology without boundaries</title><link>https://www.greenreedtech.com/categories/jenkins/</link><description>Recent content in Jenkins on Green Reed Technology - Technology without boundaries</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 14 Jul 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://www.greenreedtech.com/categories/jenkins/index.xml" rel="self" type="application/rss+xml"/><item><title>Jenkins Certified Engineer: Folders</title><link>https://www.greenreedtech.com/jenkins-certified-engineer-folders/</link><pubDate>Thu, 14 Jul 2016 00:00:00 +0000</pubDate><guid>https://www.greenreedtech.com/jenkins-certified-engineer-folders/</guid><description>&lt;p>This post covers the section listed below on the Certified Jenkins Engineer (CJE) exam.&lt;/p>
+&lt;p>Section #3: Building Continuous Delivery (CD) Pipelines&lt;/p>
+&lt;p>Folders&lt;/p>
+&lt;ul>
+&lt;li>How to control access to items in Jenkins with folders&lt;/li>
+&lt;li>Referencing jobs in folders&lt;/li>
+&lt;/ul>
+&lt;h4 id="what-are-folders">What are folders?&lt;/h4>
+&lt;p>Jenkins provides the ability to organize jobs into a hierarchical manner with the &lt;a href="https://wiki.jenkins-ci.org/display/JENKINS/CloudBees+Folders+Plugin">CloudBees Folders Plugin&lt;/a>. This allows us to manage the jobs much like we would files on a file system. Folders can also be used to manage permissions on a per folder basis to ease security administration.&lt;/p></description></item><item><title>Jenkins Certified Engineer: Fingerprints</title><link>https://www.greenreedtech.com/jenkins-certified-engineer-fingerprints/</link><pubDate>Tue, 15 Mar 2016 00:00:00 +0000</pubDate><guid>https://www.greenreedtech.com/jenkins-certified-engineer-fingerprints/</guid><description>&lt;p>This post covers the section listed below on the Certified Jenkins Engineer (CJE) exam.&lt;/p>
+&lt;p>&lt;strong>Section #1: Key CI/CD/Jenkins Concepts&lt;/strong>&lt;/p>
+&lt;p>&lt;strong>Fingerprints&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>What are fingerprints?&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>How do fingerprints work?&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;h4 id="what-are-fingerprints">What are fingerprints?&lt;/h4>
+&lt;p>Jenkins utilizes fingerprints for tracking a specific instance of a file. This is critically important when attempting to determine which particular version of a file was used during a build. The fingerprint of a file is simply a MD5 checksum that can be used for comparing files.&lt;/p></description></item></channel></rss>
