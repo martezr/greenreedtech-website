@@ -1,0 +1,136 @@
+---
+import type { GetStaticPaths } from 'astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { getProjects } from '~/utils/projects';
+import { getPermalink } from '~/utils/permalinks';
+import { findImage } from '~/utils/images';
+import Image from '~/components/common/Image.astro';
+import type { ImageMetadata } from 'astro';
+
+export const prerender = true;
+
+export const getStaticPaths = (async () => {
+  const projects = await getProjects();
+  return projects.map((project) => ({
+    params: { slug: project.slug },
+    props: { project },
+  }));
+}) satisfies GetStaticPaths;
+
+const { project } = Astro.props;
+const image = (await findImage(project.image)) as ImageMetadata | string | undefined;
+
+const metadata = {
+  title: project.title,
+  description: project.description,
+};
+---
+
+<Layout metadata={metadata}>
+  <section class="py-12 sm:py-16 lg:py-20 mx-auto max-w-4xl px-6">
+    <!-- Back link -->
+    <a
+      href="/projects"
+      class="inline-flex items-center gap-1 text-sm text-muted dark:text-slate-400 hover:text-primary dark:hover:text-blue-400 mb-8 transition-colors"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+      </svg>
+      All Projects
+    </a>
+
+    <!-- Header -->
+    <div class="mb-8">
+      <div class="flex flex-wrap items-center gap-3 mb-3">
+        <h1 class="text-4xl md:text-5xl font-bold leading-tight font-heading dark:text-gray-200">
+          {project.title}
+        </h1>
+        {project.status && (
+          <span
+            class={`text-sm font-semibold px-3 py-1 rounded-full ${
+              project.status === 'active'
+                ? 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400'
+                : project.status === 'complete'
+                  ? 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400'
+                  : 'bg-slate-100 text-slate-600 dark:bg-slate-700 dark:text-slate-400'
+            }`}
+          >
+            {project.status}
+          </span>
+        )}
+      </div>
+
+      {project.description && (
+        <p class="text-xl text-muted dark:text-slate-400 mb-4">{project.description}</p>
+      )}
+
+      {(project.technologies ?? []).length > 0 && (
+        <div class="flex flex-wrap gap-2">
+          {(project.technologies ?? []).map((tech) => (
+            <span class="text-sm bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 px-3 py-1 rounded-full">
+              {tech}
+            </span>
+          ))}
+        </div>
+      )}
+    </div>
+
+    <!-- Hero image -->
+    {image && (
+      <div class="mb-10 rounded-lg overflow-hidden">
+        <Image
+          src={image}
+          class="w-full object-cover"
+          widths={[800, 1200]}
+          sizes="(max-width: 900px) 800px, 1200px"
+          width={1200}
+          height={630}
+          format="webp"
+          alt={project.title}
+          loading="eager"
+        />
+      </div>
+    )}
+
+    <!-- Project body (from markdown) -->
+    {project.Content && (
+      <div class="prose prose-lg lg:prose-xl dark:prose-invert dark:prose-headings:text-slate-300 prose-headings:font-heading prose-a:text-primary dark:prose-a:text-blue-400 mb-12">
+        <project.Content />
+      </div>
+    )}
+
+    <!-- Related posts -->
+    {(project.resolvedPosts ?? []).length > 0 && (
+      <div>
+        <h2 class="text-2xl font-bold font-heading dark:text-slate-200 mb-6">
+          Posts in this project
+        </h2>
+        <div class="divide-y divide-slate-200 dark:divide-slate-700">
+          {(project.resolvedPosts ?? []).map((post) => (
+            <a
+              href={getPermalink(post.permalink, 'post')}
+              class="group flex gap-4 py-4 hover:text-primary dark:hover:text-blue-400 transition-colors"
+            >
+              <div class="flex-1 min-w-0">
+                <h3 class="font-semibold text-lg dark:text-slate-200 group-hover:text-primary dark:group-hover:text-blue-400 transition-colors leading-snug">
+                  {post.title}
+                </h3>
+                {post.excerpt && (
+                  <p class="text-sm text-muted dark:text-slate-400 mt-1 line-clamp-2">{post.excerpt}</p>
+                )}
+                {post.publishDate && (
+                  <p class="text-xs text-muted dark:text-slate-500 mt-2">
+                    {post.publishDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+                  </p>
+                )}
+              </div>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 shrink-0 mt-1 text-muted dark:text-slate-500 group-hover:text-primary dark:group-hover:text-blue-400 transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          ))}
+        </div>
+      </div>
+    )}
+  </section>
+</Layout>

@@ -1,0 +1,65 @@
+---
+---
+
+<div
+  id="cookie-banner"
+  class="fixed bottom-0 left-0 right-0 z-50 hidden"
+  role="dialog"
+  aria-label="Cookie consent"
+  aria-modal="false"
+>
+  <div class="bg-slate-900 dark:bg-slate-800 border-t border-slate-700 px-4 py-4 sm:px-6">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+      <p class="text-sm text-slate-300 leading-relaxed">
+        This site uses cookies only for essential functionality such as remembering your theme preference. No personal
+        data is collected, tracked, or shared with third parties. Read our{' '}
+        <a href="/privacy" class="underline text-slate-100 hover:text-white">Privacy Policy</a> for details.
+      </p>
+      <div class="flex gap-3 shrink-0">
+        <button
+          id="cookie-decline"
+          class="text-sm text-slate-400 hover:text-slate-200 transition-colors px-3 py-1.5 rounded"
+        >
+          Decline
+        </button>
+        <button
+          id="cookie-accept"
+          class="text-sm font-semibold bg-primary hover:bg-secondary text-white px-4 py-1.5 rounded transition-colors"
+        >
+          Accept
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const CONSENT_KEY = 'grt-cookie-consent';
+
+  const banner = document.getElementById('cookie-banner');
+  const acceptBtn = document.getElementById('cookie-accept');
+  const declineBtn = document.getElementById('cookie-decline');
+
+  function hideBanner() {
+    banner?.classList.add('hidden');
+  }
+
+  function showBanner() {
+    banner?.classList.remove('hidden');
+  }
+
+  const stored = localStorage.getItem(CONSENT_KEY);
+  if (!stored) {
+    showBanner();
+  }
+
+  acceptBtn?.addEventListener('click', () => {
+    localStorage.setItem(CONSENT_KEY, 'accepted');
+    hideBanner();
+  });
+
+  declineBtn?.addEventListener('click', () => {
+    localStorage.setItem(CONSENT_KEY, 'declined');
+    hideBanner();
+  });
+</script>

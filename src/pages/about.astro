@@ -1,63 +1,176 @@
 ---
-import AboutHeroImage from '../assets/blog-placeholder-about.jpg';
-import Layout from '../layouts/BlogPost.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Hero from '~/components/widgets/Hero2.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import Content from '~/components/widgets/Content.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'About Martez Reed',
+};
 ---
 
-<Layout
-	title="About Me"
-	description="Lorem ipsum dolor sit amet"
-	pubDate={new Date('August 08 2021')}
-	heroImage={AboutHeroImage}
->
-	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-		labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo
-		viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam
-		adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus
-		et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus
-		vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque
-		sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
-	</p>
+<Layout metadata={metadata}>
+  <Hero
+    tagline="About Me"
+    image={{
+      src: '/images/martezreed.jpg',
+      alt: 'Martez Reed',
+    }}
+  >
+    <Fragment slot="title">
+      Hi, I'm <span class="text-accent dark:text-white">Martez Reed</span>
+    </Fragment>
 
-	<p>
-		Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum quisque non
-		tellus. Habitasse platea dictumst quisque sagittis purus sit amet. Tellus molestie nunc non
-		blandit massa. Cursus vitae congue mauris rhoncus. Accumsan tortor posuere ac ut. Fringilla urna
-		porttitor rhoncus dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis
-		massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc.
-		Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus arcu felis
-		bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed tempus urna et pharetra pharetra
-		massa massa ultricies mi.
-	</p>
+    <Fragment slot="subtitle">
+      A technologist with a passion for automation, infrastructure, and helping organizations
+      navigate the evolving landscape of hybrid cloud technologies.
+    </Fragment>
+  </Hero>
 
-	<p>
-		Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque. Diam sit amet nisl
-		suscipit. Lacus viverra vitae congue eu consequat ac felis donec. Egestas integer eget aliquet
-		nibh praesent tristique magna sit amet. Eget magna fermentum iaculis eu non diam. In vitae
-		turpis massa sed elementum. Tristique et egestas quis ipsum suspendisse ultrices. Eget lorem
-		dolor sed viverra ipsum. Vel turpis nunc eget lorem dolor sed viverra. Posuere ac ut consequat
-		semper viverra nam. Laoreet suspendisse interdum consectetur libero id faucibus. Diam phasellus
-		vestibulum lorem sed risus ultricies tristique. Rhoncus dolor purus non enim praesent elementum
-		facilisis. Ultrices tincidunt arcu non sodales neque. Tempus egestas sed sed risus pretium quam
-		vulputate. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Fringilla
-		urna porttitor rhoncus dolor purus non. Amet dictum sit amet justo donec enim.
-	</p>
+  <Content
+    isReversed
+    items={[
+      {
+        title: 'Systems & Infrastructure',
+        description: 'Deep background in system administration evolving into modern platform and infrastructure engineering.',
+        icon: 'tabler:server',
+      },
+      {
+        title: 'Automation & Orchestration',
+        description: 'Hands-on experience with StackStorm, Jenkins, Ansible, Chef, and Puppet across enterprise environments.',
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'Technical Marketing',
+        description: 'Translating complex technical concepts into compelling content, demos, and enablement for practitioners.',
+        icon: 'tabler:writing',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Technology workspace',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Background</h3>
+      I'm currently the Vice President of Field Solutions for RiverMeadow Software, focused on helping partners and customers understand how to leverage the RiverMeadow platform to enable workload mobility, optimization, and modernization. My career spans client-facing consulting, DevOps initiatives, and helping
+      organizations modernize their infrastructure practices.
+    </Fragment>
 
-	<p>
-		Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac ut consequat semper
-		viverra. Tellus mauris a diam maecenas sed enim ut sem viverra. Venenatis urna cursus eget nunc
-		scelerisque viverra mauris in. Arcu ac tortor dignissim convallis aenean et tortor at. Curabitur
-		gravida arcu ac tortor dignissim convallis aenean et tortor. Egestas tellus rutrum tellus
-		pellentesque eu. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Ut enim
-		blandit volutpat maecenas volutpat blandit aliquam etiam. Id donec ultrices tincidunt arcu. Id
-		cursus metus aliquam eleifend mi.
-	</p>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
 
-	<p>
-		Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus imperdiet. Id porta
-		nibh venenatis cras sed felis eget velit. Ipsum a arcu cursus vitae. Facilisis magna etiam
-		tempor orci eu lobortis elementum. Tincidunt dui ut ornare lectus sit. Quisque non tellus orci
-		ac. Blandit libero volutpat sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar
-		proin gravida. Egestas integer eget aliquet nibh praesent tristique magna.
-	</p>
+  <Features2
+    title="Technical Expertise"
+    subtitle="Technologies and platforms I write about and work with."
+    columns={3}
+    items={[
+      {
+        title: 'HashiCorp Stack',
+        description: 'Vault, Terraform, Nomad, Packer — secrets management, IaC, and workload scheduling.',
+        icon: 'tabler:lock',
+      },
+      {
+        title: 'VMware / vSphere',
+        description: 'Private cloud, VEBA event-driven automation, workload identity, and container hosts.',
+        icon: 'tabler:server-2',
+      },
+      {
+        title: 'Kubernetes',
+        description: 'Container orchestration, KubeVirt, cloud-native patterns, and platform engineering.',
+        icon: 'tabler:brand-docker',
+      },
+      {
+        title: 'CI/CD & DevOps',
+        description: 'Jenkins, GitOps, Argo Workflows, pipeline design, and chaos engineering.',
+        icon: 'tabler:git-merge',
+      },
+      {
+        title: 'Security & Compliance',
+        description: 'Vault hardening, Chef InSpec, audit logging, supply chain security, and policy management.',
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Configuration Management',
+        description: 'Puppet, Chef, Ansible — policy-based autosigning, bolt provisioners, and inventory plugins.',
+        icon: 'tabler:settings',
+      },
+    ]}
+  />
+
+  <Steps2
+    title="Speaking Engagements"
+    subtitle="I've had the privilege of speaking at DevOpsDays events and VMware User Groups across the country."
+    items={[
+      {
+        title: 'DevOpsDays Indianapolis',
+        description: '2018 & 2019',
+        icon: 'tabler:microphone',
+      },
+      {
+        title: 'DevOpsDays Raleigh',
+        description: '2019',
+        icon: 'tabler:microphone',
+      },
+      {
+        title: 'DevOpsDays Minneapolis',
+        description: '2019',
+        icon: 'tabler:microphone',
+      },
+      {
+        title: 'DevOpsDays Chicago',
+        description: '2018',
+        icon: 'tabler:microphone',
+      },
+      {
+        title: 'Indy VMUG UserCon',
+        description: '2017, 2018 & 2021',
+        icon: 'tabler:microphone',
+      },
+      {
+        title: 'Chicago VMUG UserCon',
+        description: '2018',
+        icon: 'tabler:microphone',
+      },
+      {
+        title: 'ChefConf',
+        description: '2018',
+        icon: 'tabler:microphone',
+      },
+      {
+        title: 'Cloud Field Day 3',
+        description: 'Tech Field Day Delegate',
+        icon: 'tabler:microphone',
+      },
+    ]}
+  />
+
+  <Features2
+    title="Connect"
+    columns={3}
+    items={[
+      {
+        title: 'GitHub',
+        description: 'github.com/martezr',
+        icon: 'tabler:brand-github',
+      },
+      {
+        title: 'LinkedIn',
+        description: 'linkedin.com/in/martezreed',
+        icon: 'tabler:brand-linkedin',
+      },
+      {
+        title: 'X / Twitter',
+        description: '@greenreedtech',
+        icon: 'tabler:brand-x',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
 </Layout>

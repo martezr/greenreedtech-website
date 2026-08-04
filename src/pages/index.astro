@@ -1,49 +1,81 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Footer from '../components/Footer.astro';
-import Header from '../components/Header.astro';
-import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+
+const metadata = {
+  title: 'Green Reed Technology — Technology Blog & Portfolio',
+  ignoreTitleTemplate: true,
+};
 ---
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This template
-				serves as a lightweight, minimally-styled starting point for anyone looking to build a personal
-				website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to
-				<a href="https://docs.astro.build/">read the docs</a>
-				or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out
-				<a href="https://github.com/Charca/astro-blog-template">astro-blog-template</a>
-				by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
-		</main>
-		<Footer />
-	</body>
-</html>
+<Layout metadata={metadata}>
+  <Hero
+    tagline="Green Reed Technology"
+    actions={[
+      { variant: 'primary', text: 'Read the Blog', href: '/blog', icon: 'tabler:book' },
+      { text: 'About Me', href: '/about' },
+    ]}
+  >
+    <Fragment slot="title">
+      Exploring tech at the<br />
+      <span class="text-accent dark:text-white highlight">intersection of automation,</span><br />
+      infrastructure, and cloud
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      I'm <span class="font-semibold">Martez Reed</span> — tech enthusiast, blogger, and speaker.
+      I write about Automation & Orchestration, HashiCorp tools, VMware, Hybrid Cloud and everything in between.
+    </Fragment>
+  </Hero>
+
+  <BlogLatestPosts
+    title="Latest Articles"
+    information="Practical guides, deep dives, and insights on automation, infrastructure, and cloud technologies."
+    linkText="View all posts"
+    linkUrl="/blog"
+  />
+
+  <Features2
+    title="What I Write About"
+    subtitle="Topics spanning the breadth of modern infrastructure and platform engineering."
+    columns={3}
+    items={[
+      {
+        title: 'DevOps & Automation',
+        description: 'CI/CD pipelines, infrastructure as code, StackStorm, Argo Workflows, and modern delivery practices.',
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'HashiCorp Ecosystem',
+        description: 'Vault, Terraform, Nomad, and Packer — security, provisioning, and orchestration at scale.',
+        icon: 'tabler:lock',
+      },
+      {
+        title: 'Private Cloud',
+        description: 'Private cloud, container hosts, event-driven automation with VEBA, and workload identity.',
+        icon: 'tabler:server',
+      },
+      {
+        title: 'Kubernetes & Containers',
+        description: 'KubeVirt, containerization strategies, and cloud-native application patterns.',
+        icon: 'tabler:brand-docker',
+      },
+      {
+        title: 'Security & Compliance',
+        description: 'Vault hardening, policy management, audit logging, and supply chain security.',
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Cloud & Infrastructure',
+        description: 'AWS, Terraform state management, networking, and storage for modern workloads.',
+        icon: 'tabler:cloud',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+</Layout>

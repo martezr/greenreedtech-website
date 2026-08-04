@@ -1,0 +1,71 @@
+site:
+  name: Green Reed Technology
+  site: 'https://greenreedtech.com'
+  base: '/'
+  trailingSlash: false
+
+  googleSiteVerificationId: false
+
+metadata:
+  title:
+    default: Green Reed Technology
+    template: '%s — Green Reed Technology'
+  description: "Technology blog and professional portfolio of Martez Reed — automation, DevOps, infrastructure, and cloud."
+  robots:
+    index: true
+    follow: true
+  openGraph:
+    site_name: Green Reed Technology
+    images:
+      - url: '~/assets/images/default.png'
+        width: 1200
+        height: 628
+    type: website
+  twitter:
+    handle: '@martezreed'
+    site: '@martezreed'
+    cardType: summary_large_image
+
+i18n:
+  language: en
+  textDirection: ltr
+
+apps:
+  blog:
+    isEnabled: true
+    postsPerPage: 9
+
+    post:
+      isEnabled: true
+      permalink: '/%slug%'
+      robots:
+        index: true
+
+    list:
+      isEnabled: true
+      pathname: 'blog' # Blog main path, you can change this to "articles" (/articles)
+      robots:
+        index: true
+
+    category:
+      isEnabled: true
+      pathname: 'category' # Category main path /category/some-category, you can change this to "group" (/group/some-category)
+      robots:
+        index: true
+
+    tag:
+      isEnabled: true
+      pathname: 'tag' # Tag main path /tag/some-tag, you can change this to "topics" (/topics/some-category)
+      robots:
+        index: false
+
+    isRelatedPostsEnabled: true
+    relatedPostsCount: 4
+
+analytics:
+  vendors:
+    googleAnalytics:
+      id: null # or "G-XXXXXXXXXX"
+
+ui:
+  theme: 'system' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"

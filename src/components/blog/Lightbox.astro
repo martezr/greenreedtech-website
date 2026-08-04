@@ -1,0 +1,113 @@
+---
+// Lightbox for prose images in blog posts.
+// Uses event delegation on .prose — no DOM restructuring needed.
+---
+
+<dialog id="lightbox" aria-label="Image lightbox" aria-modal="true">
+  <button id="lightbox-close" aria-label="Close lightbox">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <line x1="18" y1="6" x2="6" y2="18"></line>
+      <line x1="6" y1="6" x2="18" y2="18"></line>
+    </svg>
+  </button>
+  <img id="lightbox-img" alt="" />
+</dialog>
+
+<style>
+  /*
+   * position: fixed + translate(-50%,-50%) is the MDN-recommended way to
+   * center a <dialog> consistently across browsers when using showModal().
+   * Relying on the browser's default auto-centering varies between engines.
+   */
+  #lightbox {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0;
+    background: transparent;
+    border: none;
+    outline: none;
+    overflow: visible;
+    max-width: 95vw;
+    max-height: 95vh;
+  }
+
+  #lightbox::backdrop {
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(4px);
+  }
+
+  #lightbox-img {
+    display: block;
+    max-width: 95vw;
+    max-height: 90vh;
+    width: auto;
+    height: auto;
+    border-radius: 0.5rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8);
+  }
+
+  #lightbox-close {
+    position: absolute;
+    top: -14px;
+    right: -14px;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 9999px;
+    border: none;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+
+  #lightbox-close:hover {
+    background: rgba(0, 0, 0, 0.95);
+  }
+
+  :global(.prose img) {
+    cursor: zoom-in;
+  }
+</style>
+
+<script>
+  // Regular Astro script — bundled as type="module" (deferred), so it always
+  // runs after the full DOM is parsed. is:inline scripts are hoisted to <head>
+  // and run before the body exists, causing querySelector('.prose') to return null
+  // on first load.
+  const dialog = document.getElementById('lightbox') as HTMLDialogElement | null;
+  const lightboxImg = document.getElementById('lightbox-img') as HTMLImageElement | null;
+  const closeBtn = document.getElementById('lightbox-close') as HTMLButtonElement | null;
+
+  if (dialog && lightboxImg && closeBtn) {
+    const openLightbox = (src: string, alt: string) => {
+      lightboxImg.alt = alt;
+      lightboxImg.src = src;
+      dialog.showModal();
+    };
+
+    const closeLightbox = () => {
+      dialog.close();
+      lightboxImg.removeAttribute('src');
+    };
+
+    closeBtn.addEventListener('click', closeLightbox);
+
+    dialog.addEventListener('click', (e) => {
+      if (e.target === dialog) closeLightbox();
+    });
+
+    document.querySelector('.prose')?.addEventListener('click', (e) => {
+      const target = e.target as HTMLElement;
+      if (target.tagName === 'IMG' && !target.closest('a')) {
+        const img = target as HTMLImageElement;
+        openLightbox(img.src, img.alt);
+      }
+    });
+  }
+</script>
