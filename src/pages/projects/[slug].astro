@@ -18,6 +18,7 @@ export const getStaticPaths = (async () => {
 }) satisfies GetStaticPaths;
 
 const { project } = Astro.props;
+const Content = project.Content as ((props: Record<string, never>) => unknown) | undefined;
 const image = (await findImage(project.image)) as ImageMetadata | string | undefined;
 
 const metadata = {
@@ -93,9 +94,9 @@ const metadata = {
     )}
 
     <!-- Project body (from markdown) -->
-    {project.Content && (
+    {Content && (
       <div class="prose prose-lg lg:prose-xl dark:prose-invert dark:prose-headings:text-slate-300 prose-headings:font-heading prose-a:text-primary dark:prose-a:text-blue-400 mb-12">
-        <project.Content />
+        <Content />
       </div>
     )}
 
