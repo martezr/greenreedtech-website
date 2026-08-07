@@ -4,6 +4,8 @@ publishDate: 2016-06-12T00:00:00Z
 excerpt: "Docker ([https://www.docker.com/](https://www.docker.com/)) is arguably the most popular container platform and this post covers a number of"
 image: /images/blog-placeholder-5.jpg
 category: DevOps
+tags:
+  - DevOps
 author: Martez Reed
 ---
 

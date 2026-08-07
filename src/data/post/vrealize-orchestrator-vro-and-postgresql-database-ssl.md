@@ -3,6 +3,8 @@ title: vRealize Orchestrator (vRO) and PostgreSQL Database SSL
 publishDate: 2017-06-30T00:00:00Z
 image: "https://s3.us-west-2.amazonaws.com/greenreedtech.com/vrealize_orchestrator_vro_and_postgresql_database_ssl/vRO_Cluster_SSL_7.png"
 category: VMware
+tags:
+  - VMware
 author: Martez Reed
 ---
 

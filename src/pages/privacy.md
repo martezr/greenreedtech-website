@@ -66,4 +66,4 @@ We may update this policy from time to time. When we do, the "Last updated" date
 
 If you have any questions about this Privacy Policy, you can reach us at:
 
-- By email: **martez@greenreedtech.com**
+- By email: **martez.reed@greenreedtech.com**

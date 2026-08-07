@@ -3,6 +3,8 @@ title: Jenkins Active Directory
 publishDate: 2015-11-20T00:00:00Z
 image: "https://s3.us-west-2.amazonaws.com/greenreedtech.com/jenkins_active_directory/Jenkins_AD_Cover.png"
 category: DevOps
+tags:
+  - DevOps
 author: Martez Reed
 ---
 

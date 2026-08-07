@@ -1,8 +1,12 @@
 ---
 title: Detecting HashiCorp Vault Policy Changes
 publishDate: 2022-07-13T00:00:00Z
+excerpt: Using automation to detect when a vault policy has been changed
 image: /images/vault-policy-update.jpeg
 category: Vault
+tags:
+  - Security
+  - Automation
 author: Martez Reed
 ---
 

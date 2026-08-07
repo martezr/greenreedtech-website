@@ -5,6 +5,7 @@ image: "https://s3.us-west-2.amazonaws.com/greenreedtech.com/vra7_chatops_with_s
 category: StackStorm
 tags:
   - Automation
+  - VMware
 author: Martez Reed
 ---
 

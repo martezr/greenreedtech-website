@@ -1,6 +1,7 @@
 ---
 title: Looking Back at AI Field Day 4
 publishDate: 2024-03-11T00:00:00Z
+excerpt: A recap and thoughts of the AI Field Day 4 event
 image: /images/ai-field-day.png
 category: tfd
 author: Martez Reed

@@ -1,9 +1,12 @@
 ---
 title: The Need for Workload Identity in the Private Cloud 
 publishDate: 2024-09-26T00:00:00Z
-excerpt: The Need for Workload Identity in the Private Cloud
+excerpt: Workload identity is a solved problem in the public cloud but private cloud needs the same capability
 image: /images/private-cloud-image.jpg
 category: Workload Identity
+tags:
+  - Private Cloud
+  - Security
 author: Martez Reed
 ---
 

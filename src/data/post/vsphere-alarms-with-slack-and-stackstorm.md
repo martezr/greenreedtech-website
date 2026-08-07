@@ -3,6 +3,10 @@ title: vSphere Alarms with Slack and StackStorm
 publishDate: 2017-02-03T00:00:00Z
 image: "https://s3.us-west-2.amazonaws.com/greenreedtech.com/vsphere_alarms_with_slack_and_stackstorm/stackstorm_vsphere_slack_05.png"
 category: StackStorm
+tags:
+  - Automation
+  - Orchestration
+  - VMware
 author: Martez Reed
 ---
 

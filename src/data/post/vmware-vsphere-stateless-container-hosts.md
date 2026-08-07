@@ -3,6 +3,9 @@ title: VMware vSphere Stateless Container Hosts
 publishDate: 2022-04-17T00:00:00Z
 image: "https://s3.us-west-2.amazonaws.com/greenreedtech.com/detecting-hashicorp-vault-root-login/vault_root_login.png"
 category: VMware
+tags:
+  - VMware
+  - Automation
 author: Martez Reed
 ---
 

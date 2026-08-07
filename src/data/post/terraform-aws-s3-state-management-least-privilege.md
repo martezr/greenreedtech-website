@@ -1,10 +1,11 @@
 ---
 title: Terraform AWS S3 State Management Least Privilege
 publishDate: 2017-10-30T00:00:00Z
-excerpt: A very popular Terraform state management configuration is to utilize AWS S3 for state management and AWS DynamoDB for state locking. The pr
+excerpt: An overview on securing AWS S3 for use a backend for HashiCorp Terraform
 category: DevOps
 tags:
   - Security
+  - DevOps
 author: Martez Reed
 ---
 

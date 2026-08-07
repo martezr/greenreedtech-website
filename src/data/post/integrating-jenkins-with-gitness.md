@@ -1,9 +1,11 @@
 ---
 title: Integrating Gitness with Jenkins
 publishDate: 2024-04-23T00:00:00Z
-excerpt: This blog post walks through integrating the Gitness source control system with the Jenkins CI server
+excerpt: An overview on integrating the Gitness source control system with the Jenkins CI server
 image: /images/jenkins-logo.png
 category: DevOps
+tags:
+  - DevOps
 author: Martez Reed
 ---
 

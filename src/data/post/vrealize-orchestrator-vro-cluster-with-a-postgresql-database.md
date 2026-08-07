@@ -4,6 +4,8 @@ publishDate: 2017-06-26T00:00:00Z
 excerpt: In this post we're going to build out a two node vRealize Orchestrator cluster with a PostgreSQL database. VMware is deprecating support for
 image: "https://s3.us-west-2.amazonaws.com/greenreedtech.com/vrealize_orchestrator_vro_cluster_with_a_postgresql_database/vROCluster_14.png"
 category: VMware
+tags:
+  - VMware
 author: Martez Reed
 ---
 

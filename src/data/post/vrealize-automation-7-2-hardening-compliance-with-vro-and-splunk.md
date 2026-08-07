@@ -3,6 +3,10 @@ title: vRealize Automation 7.2 hardening compliance with vRO and Splunk
 publishDate: 2017-05-01T00:00:00Z
 image: "https://s3.us-west-2.amazonaws.com/greenreedtech.com/vrealize_automation_7_2_hardening_compliance_with_vro_and_splunk/vRA72_Hardening_6.png"
 category: VMware
+tags:
+  - Automation
+  - Security
+  - VMware
 author: Martez Reed
 ---
 

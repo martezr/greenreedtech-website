@@ -3,6 +3,8 @@ title: "Jenkins Certified Engineer: Fingerprints"
 publishDate: 2016-03-15T00:00:00Z
 image: /images/blog-placeholder-5.jpg
 category: DevOps
+tags:
+  - DevOps
 author: Martez Reed
 ---
 

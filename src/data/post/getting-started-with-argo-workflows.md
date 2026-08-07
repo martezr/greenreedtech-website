@@ -1,11 +1,12 @@
 ---
 title: Getting Started with Argo Workflows
 publishDate: 2024-02-11T00:00:00Z
-excerpt: getting started with argo workflows for automationa and orchestration
+excerpt: An overview on configuring and getting started with the Argo Workflows orchestration platform
 image: "https://s3.us-west-2.amazonaws.com/greenreedtech.com/getting-started-with-argo-workflows/getting-started-with-argo-workflows-landing-page.png"
 category: DevOps
 tags:
   - Automation
+  - Orchestration
 author: Martez Reed
 ---
 

@@ -1,8 +1,13 @@
 ---
 title: Puppet Bolt Vault Inventory Plugin
 publishDate: 2019-11-26T00:00:00Z
+excerpt: An overview of how to use HashiCorp Vault for storing credentials used by Puppet Bolt
 image: /images/vaultlogo.png
 category: DevOps
+tags:
+  - Security
+  - DevOps
+  - Automation
 author: Martez Reed
 ---
 

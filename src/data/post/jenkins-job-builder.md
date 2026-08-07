@@ -1,9 +1,11 @@
 ---
 title: Jenkins Job Builder
 publishDate: 2016-01-13T00:00:00Z
-excerpt: Jenkins Job Builder introduction
+excerpt: An overview of how Jenkins Job Builder can be used to automate the creation of Jenkins jobs
 image: /images/blog-placeholder-5.jpg
 category: DevOps
+tags:
+  - DevOps
 author: Martez Reed
 ---
 

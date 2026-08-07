@@ -4,6 +4,9 @@ publishDate: 2017-05-26T00:00:00Z
 excerpt: In this post we're going to walk through how to dynamically populate a vRA request field using values retrieved from a REST API using vRO.
 image: "https://s3.us-west-2.amazonaws.com/greenreedtech.com/vra_7_2_dynamic_property_list_from_rest_api/vRA_Dynamic_Properties_4.png"
 category: VMware
+tags:
+  - VMware
+  - Automation
 author: Martez Reed
 ---
 

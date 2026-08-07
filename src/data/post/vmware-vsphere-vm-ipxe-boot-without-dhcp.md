@@ -3,6 +3,9 @@ title: VMware vSphere VM iPXE Boot without DHCP
 publishDate: 2021-08-27T00:00:00Z
 image: "https://s3.us-west-2.amazonaws.com/greenreedtech.com/vmware-vsphere-vm-ipxe-boot-without-dhcp/vSphere_ipxe_title.png"
 category: VMware
+tags:
+  - VMware
+  - Automation
 author: Martez Reed
 ---
 

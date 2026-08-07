@@ -3,6 +3,9 @@ title: vRO - Building a dynamic drop-down for vSphere tags
 publishDate: 2017-04-07T00:00:00Z
 image: "https://s3.us-west-2.amazonaws.com/greenreedtech.com/vro_building_a_dynamic_drop_down_for_vsphere_tags/vROvSphereTags_9.png"
 category: VMware
+tags:
+  - Automation
+  - VMware
 author: Martez Reed
 ---
 

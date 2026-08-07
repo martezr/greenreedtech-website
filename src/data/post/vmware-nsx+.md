@@ -4,6 +4,8 @@ publishDate: 2023-09-06T00:00:00Z
 excerpt: A recap of the VMware Tech Field Day Extra presentation during VMware Explore 2023
 image: "https://s3.us-west-2.amazonaws.com/greenreedtech.com/vmware_nsx%2B/vmware-nsx%2B-title.png"
 category: VMware
+tags:
+  - VMware
 author: Martez Reed
 ---
 

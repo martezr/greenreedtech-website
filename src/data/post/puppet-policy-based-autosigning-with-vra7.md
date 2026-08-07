@@ -1,10 +1,13 @@
 ---
 title: Puppet Policy Based Autosigning with vRA7
 publishDate: 2017-02-09T00:00:00Z
-excerpt: A critical aspect of any Puppet deployment is determining how we want to allow nodes to get their certificate signed by the Puppet master. B
+excerpt: An overview of integrating Puppet with VMware vRealize 7 to automate Puppet agent certificate signing.
 category: VMware
 tags:
   - Automation
+  - VMware
+  - DevOps
+  - Security
 author: Martez Reed
 ---
 

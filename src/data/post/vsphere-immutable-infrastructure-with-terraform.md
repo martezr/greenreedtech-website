@@ -3,6 +3,10 @@ title: vSphere Immutable Infrastructure with Terraform
 publishDate: 2017-10-13T16:56:47+06:00
 image: "https://s3.us-west-2.amazonaws.com/greenreedtech.com/vsphere_immutable_infrastructure_with_terraform/vsphere_immutable_infrastructure_with_terraform_1.png"
 category: Terraform
+tags:
+  - VMware
+  - DevOps
+  - Automation
 author: Martez Reed
 ---
 

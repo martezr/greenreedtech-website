@@ -2,7 +2,10 @@
 title: Getting Started with Gitness
 publishDate: 2024-04-11T00:00:00Z
 image: /images/getting-started-with-gitness/getting-started-with-gitness-initial-login.png
+excerpt: An overview on configuring and getting started with the Gitness source control server
 category: DevOps
+tags:
+  - DevOps
 author: Martez Reed
 ---
 

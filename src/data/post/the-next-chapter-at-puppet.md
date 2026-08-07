@@ -3,6 +3,8 @@ title: The Next Chapter at Puppet
 publishDate: 2019-06-26T00:00:00Z
 excerpt: I'm now in my second week at Puppet which is best known for its configuration management software that shares the same name as the company. 
 category: Career
+tags:
+  - Career
 author: Martez Reed
 ---
 
