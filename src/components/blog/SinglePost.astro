@@ -105,3 +105,47 @@ const { post, url } = Astro.props;
 </section>
 
 <Lightbox />
+
+<script>
+  document.querySelectorAll('pre').forEach((pre) => {
+    const wrapper = document.createElement('div');
+    wrapper.style.position = 'relative';
+    pre.parentNode!.insertBefore(wrapper, pre);
+    wrapper.appendChild(pre);
+
+    const button = document.createElement('button');
+    button.textContent = 'Copy';
+    button.setAttribute('aria-label', 'Copy code');
+    button.className = 'copy-code-btn';
+    wrapper.appendChild(button);
+
+    button.addEventListener('click', async () => {
+      const code = pre.querySelector('code');
+      const text = code ? code.innerText : pre.innerText;
+      await navigator.clipboard.writeText(text);
+      button.textContent = 'Copied!';
+      setTimeout(() => (button.textContent = 'Copy'), 2000);
+    });
+  });
+</script>
+
+<style>
+  :global(.copy-code-btn) {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    padding: 0.2rem 0.6rem;
+    font-size: 0.75rem;
+    font-family: inherit;
+    color: #cbd5e1;
+    background: #334155;
+    border: 1px solid #475569;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+
+  :global(.copy-code-btn:hover) {
+    background: #475569;
+  }
+</style>

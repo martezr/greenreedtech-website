@@ -115,3 +115,22 @@
 .dd *:first-child {
   margin-top: 0;
 }
+
+.prose :not(pre) > code::before,
+.prose :not(pre) > code::after {
+  content: none;
+}
+
+.prose :not(pre) > code {
+  background-color: rgb(241 245 249);
+  color: rgb(30 41 59);
+  padding: 0.15em 0.4em;
+  border-radius: 0.25rem;
+  font-size: 0.875em;
+  font-weight: 400;
+}
+
+.dark .prose :not(pre) > code {
+  background-color: rgb(30 41 59);
+  color: rgb(226 232 240);
+}
